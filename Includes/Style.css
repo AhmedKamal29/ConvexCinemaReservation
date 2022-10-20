@@ -1,0 +1,1631 @@
+/*
+Read this first before proceding 
+The prefix in every class name #CR works as an id to show who is responsible for this class 
+The # is then replaced with the first letter of the programmers name 
+ACR - Ahmed 
+OCR - Omar
+RCR - Rana
+YCR - Youssef 
+
+That would help us while coding so no repeated class or id names are created..
+
+Every page css style is seprated with a comment in the beginnning and the end of its style commenting the effected page name 
+*/
+
+/*global css begins here*/
+body,
+html {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+}
+
+/*global css begins here*/
+
+/*--------------Navigation bar css begins here-------------- */
+
+.RCR-navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.RCR-navbar a {
+    float: left;
+    font-size: 17px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: monospace;
+}
+
+.RCR-dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.RCR-dropdown .RCR-dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: monospace;
+    margin: 0;
+}
+
+.RCR-navbar a:hover,
+.RCR-dropdown:hover .RCR-dropbtn {
+    background-color: red;
+    cursor: pointer;
+}
+
+.RCR-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.RCR-dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.RCR-dropdown-content a:hover {
+    background-color: #ddd;
+    font-size: 120%;
+}
+
+.RCR-dropdown:hover .RCR-dropdown-content {
+    display: block;
+}
+
+
+
+/* search bar and btn .... don't edit */
+.ACR-Search {
+    position: relative;
+    margin-top: 8px;
+    margin-right: 10px;
+    float: right;
+}
+
+.ACR-Searchbox {
+    height: 25px;
+    width: 200px;
+    padding-left: 10px;
+    border-radius: 20px;
+    border-style: groove;
+    background-color: transparent;
+    color: white;
+
+}
+
+.ACR-Searchbtn {
+    position: absolute;
+    right: 0px;
+    top: 4px;
+    border: none;
+    height: 20px;
+    width: 20px;
+    padding-right: 25px;
+    background-color: transparent;
+    color: white;
+}
+
+.ACR-Searchbtn:hover {
+    cursor: pointer;
+    color: darkgray;
+}
+
+/* search bar and btn .... don't edit */
+
+
+
+/*--------------Navigation bar css ends here-------------- */
+
+/*--------------Top button css begins here-------------- */
+
+#RCR-topBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 30px;
+    border: none;
+    border-radius: 30%;
+    outline: none;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    /*    padding: 15px;*/
+
+}
+
+#RCR-topBtn:hover {
+    background: #ff416c;
+    background: linear-gradient(to right, #ff4b2b, #ff416c) no-repeat 0 0 / cover;
+}
+
+/*--------------top button css ends here-------------- */
+
+
+/*--------------home page css begins here-------------- */
+.ACR-introImage {
+    background-image: linear-gradient(to right, #ff4b2b, #ff416c), url("../Images/Movie poster cluster.jpg");
+    height: 50%;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.ACR-introLogo {
+    margin-top: 50px;
+
+}
+
+.ACR-Introtext {
+    text-align: center;
+    color: white;
+}
+
+.ACR-websiteSlogan {
+    font-family: monospace;
+    font-size: 1.5em;
+    margin-top: -50px;
+}
+
+.ACR-Movies {
+    padding: 2%;
+    background-color: #f2f2f2;
+}
+
+#ACR-title {
+    font-size: 2em;
+    font-family: monospace;
+    font-weight: bold;
+    color: #b4b5b5;
+}
+
+#ACR-Subtitle {
+    font-size: 1em;
+    font-family: monospace;
+    color: #b4b5b5;
+    margin-top: -30px;
+}
+
+.ACR-listbtn {
+    float: right;
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: transparent;
+    color: #333;
+    font-family: monospace;
+    font-weight: bold;
+
+}
+
+.ACR-listbtn:hover {
+    background: #ff416c;
+    background: linear-gradient(to right, #ff4b2b, #ff416c) no-repeat 0 0 / cover;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-family: monospace;
+
+}
+
+.ACR-NewReleases,
+.ACR-SoonInTheater {
+    margin-top: 60px;
+}
+
+/*javascript modification id*/
+#ACR-NewReleases {
+    display: block;
+}
+
+#ACR-SoonInTheater {
+    display: none;
+}
+
+/*javascript modification id*/
+
+.ACR-MovieBox {
+    position: relative;
+    width: 240px;
+    margin-top: 25px;
+    margin-left: 100px;
+    float: left;
+}
+
+.ACR-Poster {
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    width: 240px;
+    height: 360px;
+    border: none;
+    border-radius: 7px;
+}
+
+.ACR-Overlay {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ACR-MovieBox:hover .ACR-Poster {
+    opacity: 0.3;
+    width: 260px;
+    height: 380px;
+    transition: .5 ease;
+}
+
+.ACR-MovieBox:hover .ACR-Overlay {
+    opacity: 1;
+}
+
+.ACR-MovieReview {
+    text-align: center;
+    margin-left: 30px;
+}
+
+.ACR-rateStar {
+    color: green;
+    font-size: 2.2em;
+
+}
+
+.ACR-MovieReview p {
+    background-color: transparent;
+    color: black;
+    font-size: 1.8em;
+    font-weight: bold;
+    font-family: monospace;
+
+}
+
+.ACR-bookbtn {
+    background-color: transparent;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    padding: 10%;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.ACR-bookbtn:hover {
+    background: #ff416c;
+    background: linear-gradient(to right, #ff4b2b, #ff416c) no-repeat 0 0 / cover;
+    color: white;
+
+}
+
+/*Cineams info section (Home page)*/
+
+.ACR-Cinemas {
+    padding: 2%;
+}
+
+/*javascript modification id*/
+#ACR-D-Box {
+    display: block;
+}
+
+#ACR-3D {
+    display: none;
+
+}
+
+#ACR-Imax {
+
+    display: none;
+}
+
+/*javascript modification id*/
+
+.ACR-D-Box {
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+.ACR-3D {
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+.ACR-Imax {
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+.ACR-Cinemaimg {
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 60px;
+    float: left;
+    z-index: 1;
+    max-width: 1000px;
+    max-height: 1000px;
+}
+
+.ACR-Cinemaimg:hover {
+    animation: float 1.5s ease-in-out infinite;
+    cursor: pointer;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-10px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+.ACR-CinemaDescritpion {
+    position: absolute;
+    border: 2px solid red;
+    font-size: 1.5em;
+    font-family: monospace;
+    padding: 2%;
+    width: 410px;
+    height: 270px;
+    margin-left: 300px;
+    float: right;
+    text-align: left;
+    padding-left: 300px;
+}
+
+.ACR-Cinemalocation {
+    background-color: red;
+    border-radius: 10px;
+    color: white;
+    padding: 3%;
+}
+
+.ACR-LocationIcon {
+    margin-right: 10px;
+}
+
+.ACR-ViewMore {
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    padding: 2%;
+}
+
+.ACR-ViewMore:hover {
+    background-color: darkred;
+}
+
+.ACR-Signup {
+    padding: 5%;
+    background-color: #f2f2f2;
+}
+
+#ACR-Signtitle {
+    text-align: center;
+    font-family: monospace;
+}
+
+#ACR-SigntitleP {
+    text-align: center;
+    font-family: monospace;
+    font-size: 1em;
+    margin-bottom: 20px;
+
+}
+
+.ACR-SignUpbtn {
+    border: none;
+    border-radius: 20px;
+    padding: 1%;
+    background-color: red;
+    text-decoration: none;
+    color: white;
+    font-family: monospace;
+    margin-left: 47.2%;
+}
+
+.ACR-SignUpbtn:hover {
+    background-color: darkred;
+}
+
+/* --------------home page css ends here---------------- */
+
+
+/* --------------booking page css begins here-------------- */
+
+.ACR-introbackground {
+    background: #ff416c;
+    background: linear-gradient(to right, #ff4b2b, #ff416c) no-repeat 0 0 / cover;
+    height: 50%;
+    overflow: hidden;
+}
+
+.ACR-bookingContainer {
+    height: 100%;
+}
+
+.ACR-Booknow {
+
+    font-size: 6em;
+    font-family: monospace;
+    margin-top: 100px;
+}
+
+.ACR-DownArrow {
+    animation: float 1.5s ease-in-out infinite;
+    margin-top: 20px;
+}
+
+.ACR-BookingForm {
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+.ACR-inputs {
+    transition: .5s ease;
+    margin-bottom: 8%;
+    width: 300px;
+    padding: 8px 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.ACR-inputs:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+    transition: .5s ease;
+}
+
+.ACR-FormContainer {
+    float: left;
+}
+
+
+/*Seat reservation section*/
+
+.ACR-SBcontainer {
+    float: right;
+    margin-right: 200px;
+    margin-top: -60px;
+}
+
+.ACR-SeatTable {
+    width: 550px;
+}
+
+.ACR-AVSeats {
+    list-style-type: none;
+}
+
+.ACR-List {
+    float: left;
+    margin-left: 3%;
+    margin-bottom: 5%;
+    font-size: 1.5em;
+}
+
+.ACR-AVSI {
+    margin-right: 10px;
+    transform: rotate(90deg);
+}
+
+.ACR-SelectedSeat .ACR-AVSI {
+    color: green;
+}
+
+.ACR-ReservedSeat .ACR-AVSI {
+    color: red;
+}
+
+.ACR-EmptySeat .ACR-AVSI {
+    color: darkgray;
+}
+
+.ACR-RowLetter {
+    padding-left: 20px;
+}
+
+.ACR-Seatsbtn {
+    border: none;
+    background-color: transparent;
+
+}
+
+.ACR-Seatsicon {
+    transform: rotate(90deg);
+    font-size: 3em;
+
+}
+
+
+.ACR-EmptySeatt {
+    color: darkgray;
+    cursor: pointer;
+}
+
+.ACR-EmptySeatt:hover {
+    color: rgba(81, 203, 238, 1);
+}
+
+.ACR-SelectedSeatt {
+    color: green;
+    cursor: pointer;
+}
+
+.ACR-SelectedSeatt:hover {
+    color: rgba(81, 203, 238, 1);
+}
+
+.ACR-ReservedSeatt {
+    color: red;
+    cursor: not-allowed;
+}
+
+.ACR-SeatGapV {
+    padding-left: 15px;
+}
+
+.ACR-SeatGapH {
+    padding-bottom: 25px;
+}
+
+.ACR-Screen {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 5px 5px;
+}
+
+.ACR-button {
+    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-left: 450px;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+    width: 100px;
+    font-family: monospace;
+}
+
+.ACR-button:hover {
+    background-color: darkred;
+}
+
+/* --------------booking page css ends here-------------- */
+
+
+
+/* --------------Login/signup css begins here-------------- */
+.ycr-loginbody {
+    background: lightgrey;
+    font-family: monospace;
+    /*
+    height: 90vh;
+    margin: 0px 0 50px;
+*/
+
+}
+
+.ycr-h1 {
+    font-weight: bold;
+}
+
+.ycr-text {
+    font-size: 120%;
+    font-weight: 100;
+}
+
+.ycr-pagecontainer {
+    height: 100%;
+}
+
+.ycr-container {
+    position: absolute;
+    overflow: hidden;
+    width: 50%;
+    max-width: 100%;
+    min-height: 45%;
+    margin-left: 25%;
+    margin-top: 15%;
+}
+
+.ycr-form-container form {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 8%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.ycr-form-container input {
+    background: #eee;
+    border: none;
+    padding: 2% 2.2%;
+    margin: 1.5% 0;
+    width: 100%;
+}
+
+.ycr-btn {
+    border-radius: 20px;
+    border: 1px solid #ff4b2b;
+    background: #ff4b2b;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 1.6% 5%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    margin-top: 5%;
+}
+
+.ycr-btn:active {
+    transform: scale(0.95);
+}
+
+.ycr-btn:focus {
+    outline: none;
+}
+
+.ycr-btn.ycr-ghost {
+    background: transparent;
+    border-color: #fff;
+}
+
+.ycr-form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.ycr-signin-container {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.ycr-signup-container {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.ycr-overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+.ycr-overlay {
+    background: #ff416c;
+    background: linear-gradient(to right, #ff4b2b, #ff416c) no-repeat 0 0 / cover;
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.ycr-overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 12%;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.ycr-overlay-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.ycr-overlay-left {
+    transform: translateX(-20%);
+}
+
+.ycr-container.ycr-right-panel-active .ycr-signin-container {
+    transform: translateX(100%);
+}
+
+.ycr-container.ycr-right-panel-active .ycr-overlay-container {
+    transform: translateX(-100%);
+}
+
+.ycr-container.ycr-right-panel-active .ycr-signup-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+}
+
+.ycr-container.ycr-right-panel-active .ycr-overlay {
+    transform: translateX(50%);
+}
+
+/* --------------Login/signup page css ends here-------------- */
+
+/* --------------Cinema page css begins here-------------- */
+.ycr-card-image {
+    display: block;
+    min-height: 20rem;
+    background: #fff center center no-repeat;
+    background-size: cover;
+    width: 100%
+}
+
+
+.ycr-card-list {
+    display: block;
+    margin-left: 10%;
+    padding-left: 35px;
+    font-size: 0;
+    text-align: center;
+    list-style: none;
+}
+
+.ycr-card {
+    width: 90%;
+    max-width: 70rem;
+    margin: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    overflow: hidden;
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+    background-color: #ff416c;
+
+}
+
+.ycr-card:hover {
+    transform: translateY(-0.5rem) scale(1.0125);
+    box-shadow: 0 0.5em 3rem -1rem rgba(0, 0, 0, 0.5);
+}
+
+.ycr-card-description {
+    display: block;
+    padding: 1em 0.5em;
+    /*background-color: gray;*/
+    background-color: #ff416c;
+    text-decoration: none;
+    margin: 0 0 0.5em;
+    color: #fff;
+}
+
+/* --------------Cinema page css endshere-------------- */
+
+/* --------------Footer css begins here-------------- */
+footer {
+    background: #333;
+    padding: 10px 0;
+    font-family: monospace;
+}
+
+.ocr-footer-container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}
+
+.ocr-logo {
+    width: 180px;
+}
+
+.ocr-social-media {
+    margin: 20px 0;
+}
+
+.ocr-social-media a {
+    color: #001a21;
+    margin-right: 25px;
+    font-size: 22px;
+    text-decoration: none;
+    transition: .3s linear;
+}
+
+.ocr-social-media a:hover {
+    color: #fc5c65;
+}
+
+.ocr-right-col h1 {
+    font-size: 26px;
+    color: white;
+}
+
+.ycr-right-col p {
+    color: white;
+}
+
+.ocr-left-col p {
+    color: white;
+}
+
+.ocr-border {
+    width: 100px;
+    height: 4px;
+    background: #fc5c65;
+}
+
+.ocr-newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ocr-txtb {
+    flex: 1;
+    padding: 18px 40px;
+    font-size: 16px;
+    color: #293043;
+    background: #ddd;
+    border: none;
+    font-weight: 700;
+    outline: none;
+    border-radius: 30px;
+    min-width: 260px;
+}
+
+.ocr-footerbtn {
+    padding: 18px 40px;
+    font-size: 16px;
+    color: #f1f1f1;
+    background: #fc5c65;
+    border: none;
+    font-weight: 700;
+    outline: none;
+    border-radius: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: opacity .3s linear;
+}
+
+.ocr-footerbtn:hover {
+    opacity: .7;
+}
+
+@media screen and (max-width:960px) {
+    .ocr-footer-container {
+        max-width: 600px;
+    }
+
+    .ocr-right-col {
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
+    .ocr-left-col {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width:700px) {
+    .ocr-footerbtn {
+        margin: 0;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* --------------Footer css ends here-------------- */
+
+
+/* --------------Contact us page css begins here-------------- */
+
+.ocr-body {
+    background: #ff416c;
+    background: linear-gradient(to right, #ff4b2b, #ff416c) no-repeat 0 0 / cover;
+    margin: 0;
+}
+
+.ocr-pagecontainer {
+    height: 90%;
+}
+
+.ocr-contactus {
+    padding: 4%;
+    float: left;
+    margin-top: 25px;
+}
+
+.ocr-inputs {
+    border-color: white;
+    border-radius: 10px;
+    padding: 4%;
+    background-color: transparent;
+    margin-bottom: 10%;
+    width: 400px;
+
+}
+
+#ocr-massageinput {
+    height: 150px
+}
+
+#ocr-sendbtn {
+    cursor: pointer;
+    border: none;
+    color: white;
+    background-color: #333;
+    border-radius: 10px;
+    width: 100px;
+    padding: 5%;
+}
+
+.ocr-leftimgsection {
+    padding: 5%;
+    float: right;
+}
+
+.ocr-contactimg {
+    margin-right: 50px;
+    width: 700px;
+    border-radius: 20px;
+}
+
+/* --------------Contact us page css ends here-------------- */
+
+/*--------------About us page css starts here-------------- */
+
+.ocr-aboutcontainer {
+    height: 90%;
+
+}
+
+.ocr-width {
+    float: left;
+}
+
+.ocr-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+}
+
+.ocr-expand {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: monospace;
+    width: 50%;
+}
+
+.ocr-column {
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+.ocr-container {
+    content: "";
+    clear: both;
+    display: table;
+    padding: 0 16px;
+    height: 180px
+}
+
+.ocr-container img {
+    width: 40%;
+}
+
+#ocr-1 {
+    float: right;
+    margin: 20px;
+}
+
+#ocr-2 {
+    float: left;
+    margin: 20px;
+}
+
+
+.C1 h2 {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.C2 h2 {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.C3 h2 {
+    text-align: center;
+    margin-top: 70px;
+}
+
+#ocr-3 {
+    float: right;
+    margin: 20px;
+}
+
+.ocr-describtionsection {
+    float: right;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: black;
+    background-color: transparent;
+    font-family: monospace;
+    width: 38%;
+    padding: 5%;
+    height: 480px;
+    margin-right: 20px;
+    margin-top: -28%;
+}
+
+#ocr-Aboutus {
+
+    display: none;
+}
+
+#ocr-Ourvision {
+
+    display: none;
+}
+
+#ocr-Achievments {
+
+    display: none;
+}
+
+
+.ocr-teamcolumn {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 4px;
+    margin-left: 50px;
+}
+
+
+.ocr-teamcard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.ocr-teamcontainer {
+    padding: 1%;
+    font-family: monospace;
+}
+
+.ocr-teamcontainer h3 {
+    text-align: center;
+}
+
+.ocr-describtionbox h1 {
+    text-align: justify;
+    font-family: monospace;
+    margin-top: 150px;
+
+}
+
+/*--------------About us page css ends here-------------- */
+
+.RCR-whatscontainer {
+    height: 420%;
+}
+
+.RCR-comingcontainer {
+    height: 450%;
+}
+
+.rcr-sectionheight {
+    height: 200%;
+}
+
+.change {
+    margin-left: 20%;
+    margin-right: 10%;
+}
+
+.title {
+    text-align: center;
+    border-color: black;
+    background-color: red;
+    font-size: 30px;
+}
+
+.video {
+    text-align: left;
+}
+
+.size {
+    font-size: 18px;
+}
+
+.scoob1 {
+    font-size: 22px;
+    color: black;
+    text-decoration-line: none;
+}
+
+.scoob1:hover {
+    color: red;
+}
+
+
+.spongeimg {
+    float: left;
+    text-align: left;
+
+}
+
+.spongebob {
+    font-size: 22px;
+    color: black;
+    text-decoration-line: none;
+
+}
+
+.spongebob:hover {
+    color: red;
+}
+
+
+.topgunimg {
+    float: left;
+    text-align: left;
+
+}
+
+.topgun {
+    font-size: 22px;
+    color: black;
+    text-decoration-line: none;
+}
+
+.topgun:hover {
+    color: red;
+}
+
+
+.RCR-tenetimg {
+    float: left;
+    text-align: left;
+
+}
+
+.RCR-tenet {
+    font-size: 22px;
+    color: black;
+    text-decoration-line: none;
+}
+
+.RCR-tenet:hover {
+    color: red;
+}
+
+
+
+.RCR-notimeimg {
+    float: left;
+    text-align: left;
+
+}
+
+.RCR-notime {
+    font-size: 22px;
+    color: black;
+    text-decoration-line: none;
+
+}
+
+.RCR-notime:hover {
+    color: red;
+}
+
+.rightto {
+    float: left;
+}
+
+
+
+.scoobimg {
+    float: left;
+    text-align: left;
+}
+
+.subvideo {
+    text-align: center;
+}
+
+.dotline {
+    border-top: 1px dashed red;
+}
+
+/* What's on*/
+
+.RCR-invisibleimg {
+    float: left;
+    text-align: left;
+
+}
+
+.RCR-invisible {
+    font-size: 22px;
+    color: black;
+    text-decoration-line: none;
+
+}
+
+.RCR-invisible:hover {
+    color: red;
+}
+
+
+.RCR-stillbeleiveimg {
+    float: left;
+    text-align: left;
+
+
+}
+
+.RCR-stillbeleive {
+    font-size: 22px;
+    color: black;
+    text-decoration-line: none;
+
+
+}
+
+.RCR-stillbeleive:hover {
+    color: red;
+}
+
+.RCR-badboysimg {
+    float: left;
+    text-align: left;
+
+}
+
+.RCR-badboys {
+    font-size: 22px;
+    color: black;
+    text-decoration-line: none;
+
+}
+
+.RCR-badboys:hover {
+    color: red;
+}
+
+.RCR-sonicimg {
+    float: left;
+    text-align: left;
+
+}
+
+.RCR-sonic {
+    font-size: 22px;
+    color: black;
+    text-decoration-line: none;
+
+}
+
+.RCR-sonic:hover {
+    color: red;
+}
+
+.RCR-1917img {
+    float: left;
+    text-align: left;
+
+}
+
+.RCR-1917 {
+    font-size: 22px;
+    color: black;
+    text-decoration-line: none;
+
+}
+
+.RCR-1917:hover {
+    color: red;
+}
+
+
+
+.RCR_moreinfo {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.RCR_moreinfo:hover {
+    color: black;
+}
+
+
+
+.RCR-time {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+
+}
+
+
+.RCR-book {
+
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.RCR-book:hover {
+    color: red;
+}
+
+
+#panel1,
+#flip1 {
+    float: left;
+    padding: 5px;
+    text-align: center;
+    border: solid 1px #c3c3c3;
+    color: white;
+
+}
+
+#flip1 {
+    background-color: black;
+    text-align: center;
+    padding: 2px 20px;
+    margin: 4px 2px;
+
+}
+
+#flip1:hover {
+    color: red;
+}
+
+#panel1 {
+    background-color: red;
+    padding: 50px;
+    display: none;
+    border-radius: 20px;
+    opacity: 0.7;
+}
+
+
+
+#panel2,
+#flip2 {
+    float: left;
+    padding: 5px;
+    text-align: center;
+    border: solid 1px #c3c3c3;
+    color: white;
+
+}
+
+#flip2 {
+    background-color: black;
+    text-align: center;
+    padding: 2px 20px;
+    margin: 4px 2px;
+
+}
+
+#flip2:hover {
+    color: red;
+}
+
+#panel2 {
+    background-color: red;
+    padding: 50px;
+    display: none;
+    border-radius: 20px;
+    opacity: 0.7;
+}
+
+
+#panel3,
+#flip3 {
+    float: left;
+    padding: 5px;
+    text-align: center;
+    border: solid 1px #c3c3c3;
+    color: white;
+
+}
+
+#flip3 {
+    background-color: black;
+    text-align: center;
+    padding: 2px 20px;
+    margin: 4px 2px;
+
+}
+
+#flip3:hover {
+    color: red;
+}
+
+#panel3 {
+    background-color: red;
+    padding: 50px;
+    display: none;
+    border-radius: 20px;
+    opacity: 0.7;
+}
+
+
+#panel4,
+#flip4 {
+    float: left;
+    padding: 5px;
+    text-align: center;
+    border: solid 1px #c3c3c3;
+    color: white;
+
+}
+
+#flip4 {
+    background-color: black;
+    text-align: center;
+    padding: 2px 20px;
+    margin: 4px 2px;
+
+}
+
+#flip4:hover {
+    color: red;
+}
+
+#panel4 {
+    background-color: red;
+    padding: 50px;
+    display: none;
+    border-radius: 20px;
+    opacity: 0.7;
+}
+
+
+#panel5,
+#flip5 {
+    float: left;
+    padding: 5px;
+    text-align: center;
+    border: solid 1px #c3c3c3;
+    color: white;
+
+}
+
+#flip5 {
+    background-color: black;
+    text-align: center;
+    padding: 2px 20px;
+    margin: 4px 2px;
+
+}
+
+#flip5:hover {
+    color: red;
+}
+
+#panel5 {
+    background-color: red;
+    padding: 50px;
+    display: none;
+    border-radius: 20px;
+    opacity: 0.7;
+}
+
+/*--------------Profile page css begins here-------------- */
+
+
+.RCR-profbtn {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-family: monospace;
+    font-weight: bold;
+
+
+}
+
+.RCR-profbtn:hover {
+    background: linear-gradient(to right, #ff4b2b, #ff416c) no-repeat 0 0 / cover;
+    color: white;
+    font-family: monospace;
+}
+
+
+.RCR-profcenter {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/*--------------Profile page css ends here-------------- */
